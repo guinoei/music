@@ -43,7 +43,7 @@
       "category": "Ambience",
       "description": "2023",
       "youtube": "",
-      "analysis": "analysis/",
+      "analysis": "analysis/yesand.analysis.json",
       "offset": null
     },
   ]
@@ -179,7 +179,7 @@ class PlaybackClock {
 const $ = id => document.getElementById(id);
 const settings = JSON.parse($('portfolio-config').textContent);
 const tracks = (Array.isArray(settings.tracks) ? settings.tracks : []).map(t => ({ ...t, id: videoId(t.youtube || ''), data: null }));
-document.querySelectorAll('.artist-name').forEach(el => el.textContent = settings.name || 'YOUR NAME');
+document.querySelectorAll('.artist-name').forEach(el => el.textContent = settings.name || 'Guilherme Schilling');
 $('artist-role').textContent = settings.role || 'Game music composer & sound designer';
 
 document.title = `${settings.name || 'Music'} — Composer & Sound Designer`;
